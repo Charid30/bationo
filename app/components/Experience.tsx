@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 const experiences = [
   {
     title: "Sécurité Informatique",
@@ -58,13 +62,15 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const ref = useScrollAnimation();
+
   return (
     <section id="experience" className="py-24 px-6 bg-[#0a0a0f]">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-2 section-title">Expériences</h2>
         <p className="text-[#64748b] font-mono text-sm mb-12">git log --author=me</p>
 
-        <div className="relative pl-8 timeline-line space-y-12">
+        <div ref={ref} className="fade-in-section relative pl-8 timeline-line space-y-12">
           {experiences.map((exp) => (
             <div key={exp.title + exp.period} className="relative">
               {/* Timeline dot */}

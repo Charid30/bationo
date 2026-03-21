@@ -1,3 +1,9 @@
+"use client";
+
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
+const APK_BASE = "https://github.com/Charid30/bationo/releases/download/apk";
+
 const projects = [
   {
     title: "iBaara",
@@ -14,6 +20,7 @@ const projects = [
       "Interface intuitive",
     ],
     status: "Terminé",
+    apk: `${APK_BASE}/iBaara.apk`,
   },
   {
     title: "Luna",
@@ -30,6 +37,7 @@ const projects = [
       "Données privées et sécurisées",
     ],
     status: "Terminé",
+    apk: `${APK_BASE}/luna.apk`,
   },
   {
     title: "Plateforme e-commerce",
@@ -82,13 +90,15 @@ const projects = [
 ];
 
 export default function Projects() {
+  const ref = useScrollAnimation();
+
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-2 section-title">Projets</h2>
         <p className="text-[#64748b] font-mono text-sm mb-12">git log --oneline --all</p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={ref} className="fade-in-section grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.title} className="cyber-card p-6 flex flex-col">
               {/* Header */}
@@ -126,7 +136,7 @@ export default function Projects() {
               </ul>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -136,6 +146,26 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
+              {/* APK Download button */}
+              {project.apk && (
+                <a
+                  href={project.apk}
+                  className="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border transition-all duration-200 hover:scale-105"
+                  style={{
+                    borderColor: project.color,
+                    color: project.color,
+                    background: `${project.color}10`,
+                  }}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Télécharger APK
+                  <span className="text-xs opacity-70 font-mono">Android</span>
+                </a>
+              )}
             </div>
           ))}
         </div>

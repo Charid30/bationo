@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 const certCategories = [
   {
     category: "Ingénierie Logicielle & Sécurité",
@@ -52,16 +56,17 @@ const certCategories = [
 ];
 
 export default function Certifications() {
+  const ref = useScrollAnimation();
+
   return (
     <section id="certifications" className="py-24 px-6 bg-[#0a0a0f]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-2 section-title">Certifications</h2>
         <p className="text-[#64748b] font-mono text-sm mb-12">ls ~/certifications/</p>
 
-        <div className="space-y-10">
+        <div ref={ref} className="fade-in-section space-y-10">
           {certCategories.map((cat) => (
             <div key={cat.category}>
-              {/* Category header */}
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-2xl">{cat.icon}</span>
                 <h3 className="text-lg font-bold text-white">{cat.category}</h3>
@@ -71,17 +76,12 @@ export default function Certifications() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {cat.certs.map((cert) => (
                   <div key={cert.title} className="cyber-card p-4 flex items-start gap-3">
-                    <span
-                      className="text-xs font-bold mt-0.5 shrink-0"
-                      style={{ color: cat.color }}
-                    >
+                    <span className="text-xs font-bold mt-0.5 shrink-0" style={{ color: cat.color }}>
                       ✓
                     </span>
                     <div>
                       <p className="text-sm text-white font-medium leading-tight">{cert.title}</p>
-                      <p className="text-xs mt-1" style={{ color: cat.color }}>
-                        {cert.issuer}
-                      </p>
+                      <p className="text-xs mt-1" style={{ color: cat.color }}>{cert.issuer}</p>
                     </div>
                   </div>
                 ))}

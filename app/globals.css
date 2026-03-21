@@ -130,6 +130,26 @@ body {
   animation: blink 1s step-end infinite;
 }
 
+/* Scroll fade-in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill bar animated */
+.skill-bar {
+  width: 0;
+  transition: width 1s ease;
+}
+.skill-bar.animated {
+  width: var(--target-width);
+}
+
 /* Grid pattern background */
 .grid-bg {
   background-image:

@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 const educations = [
   {
     degree: "Master II en Sécurité Informatique",
@@ -49,13 +53,15 @@ const educations = [
 ];
 
 export default function Education() {
+  const ref = useScrollAnimation();
+
   return (
     <section id="education" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-2 section-title">Formation & Cursus</h2>
         <p className="text-[#64748b] font-mono text-sm mb-12">cat /etc/academic_profile</p>
 
-        <div className="space-y-8">
+        <div ref={ref} className="fade-in-section space-y-8">
           {educations.map((edu) => (
             <div key={edu.degree} className="cyber-card p-6">
               <div className="flex flex-wrap items-start gap-4">

@@ -1,8 +1,14 @@
+"use client";
+
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 export default function About() {
+  const ref = useScrollAnimation();
+
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div ref={ref} className="fade-in-section grid md:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <div>
             <h2 className="text-3xl font-bold text-white mb-2 section-title">À propos</h2>
