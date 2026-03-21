@@ -13,7 +13,7 @@ const projects = [
       "Notifications en temps réel",
       "Interface intuitive",
     ],
-    status: "En développement",
+    status: "Terminé",
   },
   {
     title: "Luna",
@@ -29,7 +29,7 @@ const projects = [
       "Rappels et notifications",
       "Données privées et sécurisées",
     ],
-    status: "En développement",
+    status: "Terminé",
   },
   {
     title: "Plateforme e-commerce",

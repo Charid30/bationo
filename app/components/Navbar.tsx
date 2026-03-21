@@ -107,7 +107,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-2xl font-bold text-[#94a3b8] hover:text-[#00ff88] transition-colors py-3 border-b border-[rgba(255,255,255,0.05)]"
+                className="text-base font-medium text-[#94a3b8] hover:text-[#00ff88] transition-colors py-3 border-b border-[rgba(255,255,255,0.05)]"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
