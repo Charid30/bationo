@@ -5,9 +5,9 @@ import emailjs from "@emailjs/browser";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 // ⚠️ Remplace ces valeurs après avoir créé ton compte EmailJS
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_r9t6v4d";
+const EMAILJS_TEMPLATE_ID = "template_8y0vpqv";
+const EMAILJS_PUBLIC_KEY = "5Mu9HD6IwrRLXjYK5";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -26,10 +26,9 @@ export default function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
-          from_email: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
-          to_email: "bationor10@gmail.com",
         },
         EMAILJS_PUBLIC_KEY
       );
