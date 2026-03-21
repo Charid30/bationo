@@ -45,7 +45,7 @@ export default function Hero() {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <a
-            href="/cv.pdf"
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/cv.pdf`}
             download
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#00ff88] text-black font-bold rounded-xl hover:bg-[#00e077] transition-all duration-200 glow-green"
           >
