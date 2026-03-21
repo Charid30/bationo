@@ -3,7 +3,7 @@ const experiences = [
     title: "Sécurité Informatique",
     company: "DCSIC — MDAC",
     companyFull: "Direction Centrale des Systèmes d'Information et de la Cyberdéfense — Ministère de la Défense et des Anciens Combattants",
-    period: "01/06/2025 — 31/07/2025",
+    period: "01/06/2025 — 31/11/2025",
     location: "Ouagadougou, Burkina Faso",
     type: "Stage",
     color: "#00ff88",
