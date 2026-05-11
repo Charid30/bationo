@@ -6,7 +6,7 @@ export default function Footer() {
           <span className="text-[#00ff88]">&gt;</span> BATIONO Ulrich Rachid Kevin
         </p>
         <p className="text-xs text-[#64748b]">
-          © {new Date().getFullYear()} — Cybersécurité & Développement
+          © {new Date().getFullYear()} — Ingénieur de Conception
         </p>
         <p className="font-mono text-xs text-[#64748b]">
           Built with <span className="text-[#00d4ff]">Next.js</span> &{" "}

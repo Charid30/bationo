@@ -113,7 +113,11 @@ export default function Contact() {
           <div className="cyber-card p-6">
             {sent ? (
               <div className="flex flex-col items-center justify-center h-full gap-4 text-center py-12">
-                <div className="text-5xl">✅</div>
+                <div className="w-16 h-16 rounded-full bg-[rgba(0,255,136,0.1)] border border-[rgba(0,255,136,0.4)] flex items-center justify-center">
+                  <svg className="w-8 h-8 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
                 <p className="text-[#00ff88] font-bold text-lg">Message envoyé !</p>
                 <p className="text-[#94a3b8] text-sm">Je vous répondrai dans les plus brefs délais.</p>
                 <button
@@ -161,7 +165,7 @@ export default function Contact() {
 
                 {error && (
                   <p className="text-red-400 text-xs font-mono">
-                    ⚠ Erreur lors de l&apos;envoi. Réessaye ou contacte-moi directement par email.
+                    Erreur lors de l&apos;envoi. Réessayez ou contactez-moi directement par email.
                   </p>
                 )}
 

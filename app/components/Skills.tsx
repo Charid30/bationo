@@ -5,7 +5,11 @@ import { useEffect, useRef } from "react";
 const skillCategories = [
   {
     title: "Développement Web",
-    icon: "🌐",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="#00d4ff" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+      </svg>
+    ),
     color: "#00d4ff",
     skills: [
       { name: "Angular", level: 85 },
@@ -17,7 +21,11 @@ const skillCategories = [
   },
   {
     title: "Développement Mobile",
-    icon: "📱",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="#00ff88" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18h3" />
+      </svg>
+    ),
     color: "#00ff88",
     skills: [
       { name: "Flutter (Dart)", level: 85 },
@@ -28,7 +36,11 @@ const skillCategories = [
   },
   {
     title: "Cybersécurité / Réseau",
-    icon: "🛡️",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="#7c3aed" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
     color: "#7c3aed",
     skills: [
       { name: "SOC (Security Operations Center)", level: 80 },
@@ -56,9 +68,7 @@ export default function Skills() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Animate fade-in
           section.classList.add("visible");
-          // Animate skill bars
           const bars = section.querySelectorAll<HTMLElement>(".skill-bar");
           bars.forEach((bar) => bar.classList.add("animated"));
           observer.unobserve(section);
@@ -82,7 +92,7 @@ export default function Skills() {
             {skillCategories.map((cat) => (
               <div key={cat.title} className="cyber-card p-6">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-2xl">{cat.icon}</span>
+                  {cat.icon}
                   <h3 className="text-lg font-bold text-white">{cat.title}</h3>
                 </div>
                 <div className="space-y-4">

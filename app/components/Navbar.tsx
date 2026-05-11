@@ -66,7 +66,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/cv.pdf`}
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/CV_Bationo_Ulrich.pdf`}
             download
             className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88] hover:text-black transition-all duration-200"
           >
@@ -115,7 +115,7 @@ export default function Navbar() {
             ))}
             <div className="mt-8">
               <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/cv.pdf`}
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/CV_Bationo_Ulrich.pdf`}
                 download
                 className="inline-flex items-center gap-2 px-6 py-4 text-base font-medium border border-[#00ff88] text-[#00ff88] rounded-xl w-full justify-center"
                 onClick={() => setMenuOpen(false)}

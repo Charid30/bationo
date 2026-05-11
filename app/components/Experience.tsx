@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "Sécurité Informatique",
     company: "DCSIC — MDAC",
-    companyFull: "Direction Centrale des Systèmes d'Information et de la Cyberdéfense — Ministère de la Défense et des Anciens Combattants",
+    companyFull: "DCSIC — Ministère de la Défense et des Anciens Combattants",
     period: "01/06/2025 — 31/11/2025",
     location: "Ouagadougou, Burkina Faso",
     type: "Stage",
@@ -99,7 +99,13 @@ export default function Experience() {
                       {exp.type}
                     </span>
                     <p className="text-xs text-[#64748b] mt-2 font-mono">{exp.period}</p>
-                    <p className="text-xs text-[#64748b]">📍 {exp.location}</p>
+                    <p className="text-xs text-[#64748b] flex items-center gap-1">
+                      <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                      </svg>
+                      {exp.location}
+                    </p>
                   </div>
                 </div>
 

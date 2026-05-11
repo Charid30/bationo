@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BATIONO Ulrich Rachid Kevin — Cybersécurité & Développement",
+  title: "BATIONO Ulrich Rachid Kevin — Ingénieur de Conception",
   description:
-    "Portfolio de BATIONO Ulrich Rachid Kevin, expert en cybersécurité (SOC/SIEM, Wazuh, Suricata) et développement (Flutter, Next.js). Basé au Burkina Faso.",
+    "Portfolio de BATIONO Ulrich Rachid Kevin, Ingénieur de Conception spécialisé en cybersécurité (SOC/SIEM, Wazuh, Suricata) et développement logiciel (Flutter, Angular, Node.js). Basé au Burkina Faso.",
   keywords: [
     "cybersécurité",
     "SOC",
