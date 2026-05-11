@@ -7,7 +7,6 @@ const issuers = [
   { name: "Google", count: 5, color: "#00ff88" },
   { name: "Microsoft", count: 3, color: "#00d4ff" },
   { name: "IBM", count: 2, color: "#7c3aed" },
-  { name: "Coursera", count: 3, color: "#94a3b8" },
   { name: "Canva", count: 3, color: "#f472b6" },
 ];
 
@@ -91,7 +90,7 @@ export default function Certifications() {
 
         {/* Résumé émetteurs */}
         <div className="flex flex-wrap gap-3 mb-12 items-center">
-          <span className="text-sm font-mono text-[#64748b] mr-2">22 certifications —</span>
+          <span className="text-sm font-mono text-[#64748b] mr-2">22 certifications — via Coursera —</span>
           {issuers.map((iss) => (
             <span
               key={iss.name}
