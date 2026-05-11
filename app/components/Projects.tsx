@@ -68,7 +68,7 @@ const projects = [
     status: "Personnel",
   },
   {
-    title: "e-Sonabhy",
+    title: "Portail SONABHY",
     subtitle: "Application web Angular — Portail SONABHY",
     description:
       "Portail web livré pour la SONABHY facilitant les démarches administratives en ligne : demandes de stages, consultation des offres d'emploi, demandes d'aides et autres services. Backend Node.js.",
