@@ -75,7 +75,7 @@ export default function Hero() {
             {/* Stats impactantes */}
             <div className="grid grid-cols-3 gap-3">
               {[
-                { value: "SOC", sub: "déployé au MDAC", color: "#00ff88" },
+                { value: "SOC", sub: "déployé en production", color: "#00ff88" },
                 { value: "5+", sub: "applications livrées", color: "#00d4ff" },
                 { value: "22", sub: "certifications", color: "#7c3aed" },
               ].map((s) => (
